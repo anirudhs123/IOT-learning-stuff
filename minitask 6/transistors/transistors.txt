@@ -1,0 +1,20 @@
+*two bjts are used
+V1 2 0 5
+r1 1 b1 80k
+r2 b1 0 40k
+r3 2 c1 4.3k
+r4 e1 0 2.7k
+r5 3 e2 2k
+r6 c2 0 2.4k
+q1 c1 b1 e1 qmodn
+q2 c2 c1 e2 qmodp
+.model qmodn NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=65.62 Ne=1.208
++           Ise=19.48f Ikf=.2385 Xtb=1.5 Br=9.715 Ne=2 Ise=0 Ikr=0 Re=1
++           Cje=9.393p Mje=.3416 Vje=.75 Fe=.5 Cje=22.01p Mje=.377 Vje=.75
++           Tr=58.98n Tf=408.8p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+.model qmodp PNP(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=65.62 Ne=1.208
++           Ise=19.48f Ikf=.2385 Xtb=1.5 Br=9.715 Ne=2 Ise=0 Ikr=0 Re=1
++           Cje=9.393p Mje=.3416 Vje=.75 Fe=.5 Cje=22.01p Mje=.377 Vje=.75
++           Tr=58.98n Tf=408.8p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+.op
+.end

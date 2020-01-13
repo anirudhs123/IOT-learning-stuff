@@ -1,0 +1,78 @@
+
+1)
+the basic difference btw an emulator and a simulator is that a simulator is 
+actually a duplicate or a xerox copy of what the original software is whereas
+the emulator is something that performs the same task using the same components
+but has a different internal working mechanism.
+Example of a emulator :Oracle virtual machine box
+Example of a simulator:Flight simulator
+
+• Emulators are imitating or duplicating the process of another software/hardware within another environment. The underlying mechanisms are different from the original software/hardware.
+
+• Emulation is mainly used in computing and electronics.
+
+• Simulators are used to recreate the operation or behavior of a system. The underlying principles can be same as the original or different. Simulators are used in a wider spectrum of fields than computing and electronics.
+
+
+3) we can use waveform arithmetic to plot the sum diffrence or even derivative of the graphs
+we can right click on the graph at any point
+ and drag the cursor and set it to other point now the original point will show two we can now
+ view a bar at right bottom that show horizontal diff btw points and vertical diff btw points and also slope 
+
+4) to download a library from online and use it.
+we will first download it and then copy its contents into a text file and open it in a netlist file using 
+
+
+3)led part
+*Typ RED GaAs LED: Vf=1.7V Vr=4V If=40mA trr=3uS
+.MODEL LED1 D (IS=93.2P RS=42M N=3.73 BV=4 IBV=10U
++ CJO=2.97P VJ=.75 M=.333 TT=4.32U)
+
+*Typ RED,GREEN,YELLOW,AMBER GaAs LED: Vf=2.1V Vr=4V If=40mA trr=3uS
+.MODEL LED2 D (IS=93.1P RS=42M N=4.61 BV=4 IBV=10U
++ CJO=2.97P VJ=.75 M=.333 TT=4.32U)
+
+*Typ BLUE SiC LED: Vf=3.4V Vr=5V If=40mA trr=3uS
+.MODEL LED3 D (IS=93.1P RS=42M N=7.47 BV=5 IBV=30U
++ CJO=2.97P VJ=.75 M=.333 TT=4.32U)
+
+
+ 
+4)downloading part
+.MODEL parts:
+
+To import a simple third party SPICE model into LTspice using the .MODEL directive , follow these steps:
+
+Add a generic component to the schematic that represents the symbol of the SPICE model
+
+Download the SPICE model into the same directory as the circuit you are simulating.
+
+Make a note of the filename of the SPICE model, including the file extension.
+
+Add a .include SPICE directive to the schematic that will use the model
+
+Open the SPICE model and note the name of the model - this is the text immediately after the .MODEL directive and before the part designator (in the case below this is the text DI_SBG1030L). The SPICE model can be viewed from within LTspice.
+
+Press <CTRL> then right click over the generic component and change the 'Value' field to the SPICE model name
+
+Ensure the .include SPICE directive contains the exact filename of the SPICE model
+
+Ensure the name of the generic component exactly matches the SPICE model name
+
+
+.SUBCKT parts
+
+A similar procedure can be used to import more complex models. Follow the steps above, except when modifying the Component Attribute Editor (see FIG 2), ensure the Prefix attribute is marked as X (and not D as in FIG 2).
+
+ 
+
+We are now going to compare the performance of the LT6231, (215MHz low noise op amp) with the LM324 (low cost op amp).
+
+
+    4)  .include (filename)
+
+
+
+6) we can convert the dc input into a square wave using a 555 timer buit with opamp
+  then we can build an integrator using opamp to get triangular wave
+s    
