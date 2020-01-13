@@ -1,0 +1,49 @@
+
+
+To create a new branch
+Go to your new repository hello-world.
+Click the drop down at the top of the file list that says branch: master.
+Type a branch name, readme-edits, into the new branch text box.
+Select the blue Create branch box or hit “Enter” on your keyboard.
+
+To create a new repository
+In the upper right corner, next to your avatar or identicon, click  and then select New repository.
+Name your repository hello-world.
+Write a short description.
+Select Initialize this repository with a README.
+
+
+On GitHub, saved changes are called commits. Each commit has an associated commit message, which is a description explaining why a particular change was made. Commit messages capture the history of your changes, so other contributors can understand what you’ve done and why.
+
+homework1
+
+1)The method split() returns a list of all the words in the string
+print str.split(" x",y)
+here x is delimeter(one which makes us to move to next line) and y is number of splits
+2)count() returns count of how many times obj occurs in list
+3)find takes three args first string to search for then beg for search and end for search
+str.find(str, beg=0, end=len(string))
+4)isalnum() checks if its a character or digit 
+5)isalnum() cjevks if its a character
+6) strip()-This method returns a copy of the string in which all chars have been stripped from the beginning and the end of the string.
+ 7)zfill() pads string on the left with zeros to fill width.
+
+homework 2
+
+1)L1 = list()
+or
+L1=[]
+both are used for creating an empty list
+2)list.append(obj)
+is used to append an object to exisisting list
+3)aList.remove(obj)
+is used to delete an element from a list
+4)insert(): Adds a new entry to the position specified in the list.
+to replace a element we first remove and then insert
+5)  List1.extend(List2) 
+this copies all elemnts of list 2 to end of list 1
+6)list.sort() 
+sorts in ascending order
+my_list.sort(reverse=True)
+sorts in descending order
+7) if string is there and numbers are there all are arranged based on increasing ascii value so nums come first  then we hv all strings arranged in alphabetical order

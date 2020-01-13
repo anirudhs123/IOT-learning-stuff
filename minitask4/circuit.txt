@@ -1,0 +1,178 @@
+this is the circuit file .it contains the info about the connections in the circuit.
+I am learning python 
+.circuit this has info about the connections .end
+
+
+
+try:
+    str = input("enter file to open")
+    f = open(str, "r+")
+    print("name of file", f.name)
+    data = f.read()
+    print("{}".format(data[25]))
+    #print("read file is", data)
+    n=len(data)
+    print("total characters: %d"%(n))
+    i=1
+    while(i<=n):
+        if(data[i]=='.'):
+            print("dot found")
+            print("position%d"%(i))
+
+            if(data[i+1]=="c"&data[i+2]=="i"&data[i+3]=="r"&data[i+4]=="c"&data[i+5]=="u"&data[i+6]=="i"&data[i+7]=="t"):
+
+                j=i
+                l=0
+                while(data[j-1]!="d"|data[j-2]!="n"|data[j-3]!="e"|data[j-4]!="."):
+                    j=j+1
+                    l=l+1
+                f.seek(0,0)
+                f.seek(0,i)
+                datar=f.read(l)
+                print("message copied as:{}".format(datar))
+            else:
+                 i=i+1
+        else:
+            i=i+1
+    f.close()
+"""except Exception as e:
+   print("error")
+   print(e)"""
+
+
+
+1)Button
+2)message
+3)checkbutton
+4)listbox
+5)scrollbar
+
+1)
+button method:
+
+import Tkinter
+import tkMessageBox
+
+top = Tkinter.Tk()
+
+def helloCallBack():
+   tkMessageBox.showinfo( "Hello Python", "Hello World")
+
+B = Tkinter.Button(top, text ="Hello", command = helloCallBack)
+
+B.pack()
+top.mainloop()
+
+2)display options
+
+from Tkinter import *
+import tkMessageBox
+import Tkinter
+
+top = Tkinter.Tk()
+CheckVar1 = IntVar()
+CheckVar2 = IntVar()
+C1 = Checkbutton(top, text = "Music", variable = CheckVar1, \
+                 onvalue = 1, offvalue = 0, height=5, \
+                 width = 20)
+C2 = Checkbutton(top, text = "Video", variable = CheckVar2, \
+                 onvalue = 1, offvalue = 0, height=5, \
+                 width = 20)
+C1.pack()
+C2.pack()
+top.mainloop()
+
+
+3)from Tkinter import *
+
+top = Tk()
+L1 = Label(top, text="User Name")
+L1.pack( side = LEFT)
+E1 = Entry(top, bd =5)
+E1.pack(side = RIGHT)
+
+top.mainloop()
+
+
+
+4)from Tkinter import *
+import tkMessageBox
+import Tkinter
+
+top = Tk()
+
+Lb1 = Listbox(top)
+Lb1.insert(1, "Python")
+Lb1.insert(2, "Perl")
+Lb1.insert(3, "C")
+Lb1.insert(4, "PHP")
+Lb1.insert(5, "JSP")
+Lb1.insert(6, "Ruby")
+
+Lb1.pack()
+top.mainloop()
+
+5)from Tkinter import *
+import tkMessageBox
+import Tkinter
+
+top = Tkinter.Tk()
+
+def helloCallBack():
+   tkMessageBox.showinfo( "Hello Python", "Hello World")
+
+B = Tkinter.Button(top, text ="Hello", command = helloCallBack)
+
+B.pack()
+B.place(bordermode=OUTSIDE, height=100, width=100)
+top.mainloop()
+
+
+6)from Tkinter import *
+
+def onclick():
+   pass
+
+root = Tk()
+text = Text(root)
+text.insert(INSERT, "Hello.....")
+text.insert(END, "Bye Bye.....")
+text.pack()
+
+text.tag_add("here", "1.0", "1.4")
+text.tag_add("start", "1.8", "1.13")
+text.tag_config("here", background="yellow", foreground="blue")
+text.tag_config("start", background="black", foreground="green")
+root.mainloop()
+
+
+
+
+
+4)
+flask using html
+
+
+from flask import Flask
+from flask import request
+from flask import render_template
+import stringComparison
+
+app = Flask(__name__)
+
+@app.route('/')
+def my_form():
+    return render_template("dummy.html") # this should be the name of your html file
+
+@app.route('/', methods=['POST'])
+def my_form_post():
+    text1 = request.form['text1']
+    text2 = request.form['text2']
+    plagiarismPercent = stringComparison.extremelySimplePlagiarismChecker(text1,text2)
+    if plagiarismPercent > 50 :
+        return "<h1>Plagiarism Detected !</h1>"
+    else :
+        return "<h1>No Plagiarism Detected !</h1>"
+
+if __name__ == '__main__':
+    app.run()

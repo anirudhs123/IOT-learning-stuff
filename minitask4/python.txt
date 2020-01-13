@@ -1,0 +1,132 @@
+
+
+from tkinter import *
+from tkinter import messagebox
+import tkinter
+
+top = tkinter.Tk()
+
+
+var = StringVar()
+top.geometry("100000x100000")
+
+
+
+scrollbar = Scrollbar(top)
+scrollbar.pack( side = RIGHT, fill = Y )
+scrollbar.set(0,120)
+"""
+mylist = Listbox(top, yscrollcommand = scrollbar.set )
+for line in range(100):
+ mylist.insert(END,  + str(line))
+
+mylist.pack( side = LEFT, fill = BOTH )
+scrollbar.config( command = mylist.yview )
+"""
+
+
+def hello():
+   messagebox.showinfo("RESULT", "CORRECT ANSWER")
+
+def hello1():
+       messagebox.showinfo("RESULT", "WRONG ANSWER")
+
+
+L1 = Label(top, text=" 1)which country won the world cup in 1983 ?")
+L1.pack( side = LEFT)
+L1.place(x=0,y=0)
+B1 = Button(top, text = " a)INDIA", command = hello)
+B1.place(x = 10,y = 20)
+B2 = Button(top, text = " b)AUSTRALIA", command = hello1)
+B2.place(x = 10,y = 50)
+B3 = Button(top, text = " c)ENGLAND", command = hello1)
+B3.place(x = 10,y = 80)
+B4 = Button(top, text = " d)PAKISTAN", command = hello1)
+B4.place(x = 10,y = 110)
+
+
+
+
+scrollbar.set(125,245)
+L2 = Label(top, text=" 2)who was the captain of the england football that reached finals   ?")
+L2.pack( side = LEFT)
+L2.place(x=0,y=130)
+C1 = Button(top, text = " a)DANNY WELBECK ", command = hello1)
+C1.place(x = 10,y = 150)
+C2 = Button(top, text = " b)RAHEEM STIRLING", command = hello1)
+C2.place(x = 10,y = 180)
+C3 = Button(top, text = " c)HARRY KANE ", command = hello)
+C3.place(x = 10,y = 210)
+C4 = Button(top, text = " d)WAYNE ROONEY ", command = hello1)
+C4.place(x = 10,y = 240)
+
+scrollbar.set(250,390)
+L3 = Label(top, text=" 3)what is the largest cricket ground in india?")
+L3.pack( side = LEFT)
+L3.place(x=0,y=260)
+D1 = Button(top, text = " a)WANKHADE ", command = hello1)
+D1.place(x = 10,y = 290)
+D2 = Button(top, text = " b)CHEPAUK", command = hello1)
+D2.place(x = 10,y = 320)
+D3 = Button(top, text = " c)CHINNASWAMY ", command = hello1)
+D3.place(x = 10,y = 350)
+D4 = Button(top, text = " d)EDEN GARDENS ", command = hello)
+D4.place(x = 10,y = 380)
+
+scrollbar.set(395,515)
+L4 = Label(top, text=" 4)Who is  the scientist to appear on currency notes of two countries ?")
+L4.pack( side = LEFT)
+L4.place(x=0,y=400)
+E1 = Button(top, text = " a)MARIE CURIE ", command = hello)
+E1.place(x = 10,y = 420)
+E2 = Button(top, text = " b)BENJAMIN FRANLIN", command = hello1)
+E2.place(x = 10,y = 450)
+E3 = Button(top, text = " c)ISSAC NEWTON ", command = hello1)
+E3.place(x = 10,y = 480)
+E4 = Button(top, text = " d)ALBERT EINSTIEN ", command = hello1)
+E4.place(x = 10,y = 510)
+
+scrollbar.set(520,650)
+L5 = Label(top, text=" 5)Which of the following is not part of BIG 4?")
+L5.pack( side = LEFT)
+L5.place(x=0,y=530)
+D1 = Button(top, text = " a)KPMG", command = hello1)
+D1.place(x = 10,y = 550)
+D2 = Button(top, text = " b)PWC", command = hello1)
+D2.place(x = 10,y = 580)
+D3 = Button(top, text = " c)E&Y ", command = hello1)
+D3.place(x = 10,y = 610)
+D4 = Button(top, text = " d)BAYNE ", command = hello)
+D4.place(x = 10,y = 640)
+
+""""
+L2 = Label(top, text=" 2)who was the captain of the england football that reached finals   ?")
+L2.pack( side = LEFT)
+L2.place(x=0,y=150)
+C1 = Button(top, text = " a)DANNY WELBECK ", command = hello1)
+C1.place(x = 10,y = 170)
+C2 = Button(top, text = " b)RAHEEM STIRLING", command = hello1)
+C2.place(x = 10,y = 205)
+C3 = Button(top, text = " c)HARRY KANE ", command = hello)
+C3.place(x = 10,y = 240)
+C4 = Button(top, text = " d)WAYNE ROONEY ", command = hello1)
+C4.place(x = 10,y = 275)
+
+
+L2 = Label(top, text=" 2)who was the captain of the england football that reached finals   ?")
+L2.pack( side = LEFT)
+L2.place(x=0,y=150)
+C1 = Button(top, text = " a)DANNY WELBECK ", command = hello1)
+C1.place(x = 10,y = 170)
+C2 = Button(top, text = " b)RAHEEM STIRLING", command = hello1)
+C2.place(x = 10,y = 205)
+C3 = Button(top, text = " c)HARRY KANE ", command = hello)
+C3.place(x = 10,y = 240)
+C4 = Button(top, text = " d)WAYNE ROONEY ", command = hello1)
+C4.place(x = 10,y = 275)
+
+
+#E1 = Entry(top, bd =25)
+#E1.pack(side = RIGHT)
+"""
+top.mainloop()
