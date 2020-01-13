@@ -1,0 +1,20 @@
+Circuit: *halfwaverectifier
+
+
+Date: Tue Jul 16 21:31:16 2019
+Total elapsed time: 0.285 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 8009
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 4
+fillins = 0
+solver = Normal
+Matrix Compiler1:       7 opcodes  0.1/[0.1]/0.1
+Matrix Compiler2: 242 bytes object code size  0.1/0.1/[0.1]
+

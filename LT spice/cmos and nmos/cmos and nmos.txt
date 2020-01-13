@@ -1,0 +1,9 @@
+*cmos amd nmos gates
+vdd 1 0 5
+vin in 0
+m1 1 in out body1 mmodp l=5um w=25um
+m2 0 in out body2 mmodn l=5um w=25 um
+.model mmodp PMOS()
+.model mmodn NMOS()
+.dc vin -2 2 1m
+.end

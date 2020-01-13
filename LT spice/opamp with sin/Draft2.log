@@ -1,0 +1,25 @@
+Circuit: * C:\Users\dell\Desktop\LT spice\opamp with sin\Draft2.asc
+
+WARNING: Less than two connections to node S0.  This node is used by A1.
+WARNING: Less than two connections to node S1.  This node is used by A2.
+WARNING: Less than two connections to node S3.  This node is used by A6.
+WARNING: Less than two connections to node S2.  This node is used by A3.
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Jul 18 00:25:01 2019
+Total elapsed time: 0.190 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 9774
+traniter = 9771
+tranpoints = 4850
+accept = 4354
+rejected = 496
+matrix size = 18
+fillins = 0
+solver = Normal
+Matrix Compiler1: 350 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 790 bytes object code size  0.1/0.2/[0.1]
+
