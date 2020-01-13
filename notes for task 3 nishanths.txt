@@ -1,0 +1,92 @@
+https://www.engineersgarage.com/contribution/arduino-based-air-quality-monitoring-iot-project
+https://whatis.techtarget.com/definition/IoT-gateway
+https://www.networkworld.com/article/3227206/faq-what-is-nb-iot.html
+https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/
+https://build.sigfox.com/certification#sigfox-certification-tests
+https://www.survivingwithandroid.com/device-power-management-in-iot/
+
+
+The configuration of all these devices are usually
+
+GPS - for location based applications, speed detection.
+Gyro + Accelerometer - for crash detection, driving pattern detection.
+2G/ 3G /4G Modem - for connecting it up to the Internet
+Bluetooth - for control or configuration from a near range device.
+OBD adapter - For reading Engine Fault Codes, Engine Rpm, Intake air temperature, Mass airflow sensor, Engine Coolant temperature etc.
+
+
+
+
+ECU
+ |
+ |  <----CAN-bus DATA COLLECTION
+ v
+CAN-bus CONVERTER
+ |
+ |   <----CAN-bus DATA CONVERSION 
+ v  
+ARDUINO
+ |
+ |   <----SEND DATA TO CLOUD
+ v
+CLOUD STORAGE
+
+
+
+
+
+mqtt
+
+
+
+1)publish and subscribe
+2)messgaes:
+
+it is the info exchnaged btw devices .it is either a command or a data
+device 1 publishes on a toipc
+devicde 2 is subscribed to tha same topic
+hence device 2 recieves messages from device 1
+
+3)topics:
+
+intrest for particular tmessages
+specify where you want to publish
+
+topic exampel: home/office/lamp
+
+4)broker:
+
+it gathers all the message
+filters the message
+sends it to all the subscribed clients
+commonly used broker :MOSQUITTO(r-pi)
+example2: mqtt.groov.com
+
+wild card:
+a)+/status  this wil get all topics with status as subtopics
+b)worksop/#  this will get all the subtoics of workshop
+
+secured port:8883
+insecure port:1883
+
+c)# this willmatch with everything possible
+
+
+q5)sigfox:
+sigfox ready module
+the device is installed with this module and this will send info which is authenticated  using a private key(special for each device) 
+there is a sigfox base station that recievse these messages.the base sation is connected to the internet and it would send the message it recieved to the cloud.from sigfox cloud it transfers into our cloud and from that we can react accordingly
+
+
+how to get started with sigfox:
+1)we need to be in the area of coverage
+
+It’s easy to start your IoT project:
+
+Find an existing solution or build your own one (these solutions and the partners you’ll need are referenced on the Sigfox Partner Network online platform).
+Contact your local Sigfox Operator for Sigfox IoT connectivity service subscription.
+
+
+
+1)connect esp8266 to sensor
+2)
